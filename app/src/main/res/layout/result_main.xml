@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <EditText
+        android:id="@+id/bmi_value_view"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="BMI"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:theme="@style/AppTheme.Line"
+        android:translationZ="90dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bodymassindex" />
+
+    <TextView
+        android:id="@+id/bodymassindex"
+        android:layout_width="312dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center|center_horizontal"
+        android:text="BODY MASS INDEX"
+        android:textColor="#86FDFCFC"
+        android:translationZ="90dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_bmi" />
+
+    <TextView
+        android:id="@+id/hello_name"
+        android:layout_width="291dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Hello:"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:translationZ="90dp"
+        app:layout_constraintBottom_toTopOf="@+id/bmi_description"
+        app:layout_constraintEnd_toEndOf="@+id/view_bmi"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/view_bmi"
+        app:layout_constraintTop_toBottomOf="@+id/bmi_value_view"
+        app:layout_constraintVertical_bias="0.18" />
+
+    <TextView
+        android:id="@+id/bmi_description"
+        android:layout_width="288dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:text="Normal BMI Range: 18.5kg/m2 - 25kg/m2"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:translationZ="90dp"
+        app:layout_constraintBottom_toTopOf="@+id/ponderal_index"
+        app:layout_constraintEnd_toEndOf="@+id/view_bmi"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="@+id/view_bmi" />
+
+    <TextView
+        android:id="@+id/ponderal_index"
+        android:layout_width="192dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="156dp"
+        android:text="Ponderal Index"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:translationZ="90dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_bmi"
+        app:layout_constraintEnd_toEndOf="@+id/view_bmi"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/view_bmi" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="409dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:translationZ="90dp"
+        app:adSize="SMART_BANNER"
+        app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></com.google.android.gms.ads.AdView>
+
+    <View
+        android:id="@+id/view_bmi"
+        android:layout_width="311dp"
+        android:layout_height="537dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_corners"
+        app:layout_constraintBottom_toTopOf="@+id/adView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="311dp"
+        android:layout_height="1dp"
+        android:background="#8FFFFFFF"
+        android:translationZ="90dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bodymassindex" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="311dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="#86FDFCFC"
+        android:translationZ="90dp"
+        app:layout_constraintBottom_toTopOf="@+id/bodymassindex"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/shareimage"
+        android:layout_width="37dp"
+        android:layout_height="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bmi_share"
+        app:layout_constraintEnd_toEndOf="@+id/bmi_share"
+        app:layout_constraintHorizontal_bias="0.123"
+        app:layout_constraintStart_toStartOf="@+id/bmi_share"
+        app:layout_constraintTop_toTopOf="@+id/bmi_share"
+        app:srcCompat="@android:drawable/ic_menu_share" />
+
+    <Button
+        android:id="@+id/bmi_share"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="118dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/button_edge"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?selectableItemBackgroundBorderless"
+        android:paddingStart="30dp"
+        android:text="Share"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_bmi"
+        app:layout_constraintStart_toStartOf="@+id/view_bmi"
+        app:layout_constraintTop_toBottomOf="@+id/ponderal_index"
+        app:layout_constraintVertical_bias="0.225" />
+
+    <ImageView
+        android:id="@+id/rateimage"
+        android:layout_width="37dp"
+        android:layout_height="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bmi_rate"
+        app:layout_constraintEnd_toEndOf="@+id/bmi_rate"
+        app:layout_constraintHorizontal_bias="0.148"
+        app:layout_constraintStart_toStartOf="@+id/bmi_rate"
+        app:layout_constraintTop_toTopOf="@+id/bmi_rate"
+        app:srcCompat="@android:drawable/btn_star" />
+
+    <Button
+        android:id="@+id/bmi_rate"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="118dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/button_edge"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?selectableItemBackgroundBorderless"
+        android:paddingStart="30dp"
+        android:text="Rate"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#FFFEFE"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_bmi"
+        app:layout_constraintEnd_toEndOf="@+id/view_bmi"
+        app:layout_constraintTop_toBottomOf="@+id/ponderal_index"
+        app:layout_constraintVertical_bias="0.225" />
+
+    <Button
+        android:id="@+id/bmi_about"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="185dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="64dp"
+        android:background="@drawable/button_edge"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?selectableItemBackgroundBorderless"
+        android:paddingStart="30dp"
+        android:text="About and FAQ"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#FFFEFE"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_bmi"
+        app:layout_constraintEnd_toEndOf="@+id/view_bmi"
+        app:layout_constraintTop_toBottomOf="@+id/ponderal_index"
+        app:layout_constraintVertical_bias="0.9" />
+
+    <ImageView
+        android:id="@+id/aboutimage"
+        android:layout_width="37dp"
+        android:layout_height="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bmi_about"
+        app:layout_constraintEnd_toEndOf="@+id/bmi_about"
+        app:layout_constraintHorizontal_bias="0.033"
+        app:layout_constraintStart_toStartOf="@+id/bmi_about"
+        app:layout_constraintTop_toTopOf="@+id/bmi_about"
+        app:srcCompat="@android:drawable/ic_menu_help" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

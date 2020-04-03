@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "809718707523",
+    "firebase_url": "https://andy-bmi.firebaseio.com",
+    "project_id": "andy-bmi",
+    "storage_bucket": "andy-bmi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809718707523:android:bc276f32f8372f6f19ebf6",
+        "android_client_info": {
+          "package_name": "com.pineappleapps.andersonakoto_bmi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "809718707523-270ij7kh0v09qkgh6u4n5t1is06bjbka.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pineappleapps.andersonakoto_bmi",
+            "certificate_hash": "e96fa904023f57a441464396673719f74a1f66c6"
+          }
+        },
+        {
+          "client_id": "809718707523-qujvalj8h4edf2fi8nbdaeb8umcesij6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzIX2VenTBw0Tt_lcvTjdUHAK5w6FRvoU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "809718707523-qujvalj8h4edf2fi8nbdaeb8umcesij6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
