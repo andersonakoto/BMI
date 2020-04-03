@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,20 +12,20 @@
         android:id="@+id/personal_details_text"
         android:layout_width="304dp"
         android:layout_height="65dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="68dp"
         android:text="Give Your Weight and Height Below:"
         android:textAlignment="center"
         android:textColor="@color/colorBMI"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.583"
+        app:layout_constraintHorizontal_bias="0.579"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <NumberPicker
         android:id="@+id/bmi_weight"
-        android:layout_width="wrap_content"
-        android:layout_height="122dp"
+        android:layout_width="76dp"
+        android:layout_height="140dp"
         android:scrollbarSize="4dp"
         android:theme="@style/AppTheme.Picker"
         android:translationZ="90dp"
@@ -36,8 +37,8 @@
 
     <NumberPicker
         android:id="@+id/bmi_height"
-        android:layout_width="wrap_content"
-        android:layout_height="122dp"
+        android:layout_width="76dp"
+        android:layout_height="140dp"
         android:layout_marginEnd="40dp"
         android:theme="@style/AppTheme.Picker"
         android:translationZ="90dp"
@@ -50,16 +51,18 @@
         android:id="@+id/bmi_calculate"
         android:layout_width="299dp"
         android:layout_height="53dp"
+        android:layout_marginTop="56dp"
         android:background="@drawable/button_corners"
         android:text="Calculate"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/adView"
+        app:layout_constraintBottom_toTopOf="@+id/adView_main"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view_2" />
+        app:layout_constraintTop_toBottomOf="@+id/view_2"
+        app:layout_constraintVertical_bias="0.125" />
 
     <TextView
         android:id="@+id/weight"
@@ -71,7 +74,7 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/view_2"
         app:layout_constraintEnd_toStartOf="@+id/height"
-        app:layout_constraintHorizontal_bias="0.389"
+        app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -79,7 +82,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:layout_marginEnd="60dp"
+        android:layout_marginEnd="56dp"
         android:text="Height\n(Centimetres)"
         android:textAlignment="center"
         android:textSize="18sp"
@@ -88,8 +91,8 @@
 
     <View
         android:id="@+id/view_2"
-        android:layout_width="288dp"
-        android:layout_height="185dp"
+        android:layout_width="342dp"
+        android:layout_height="207dp"
         android:layout_marginTop="32dp"
         android:background="@android:drawable/dialog_holo_light_frame"
         app:layout_constraintEnd_toEndOf="parent"
@@ -98,7 +101,7 @@
         app:layout_constraintTop_toBottomOf="@+id/height" />
 
     <com.google.android.gms.ads.AdView
-        android:id="@+id/adView"
+        android:id="@+id/adView_main"
         android:layout_width="409dp"
         android:layout_height="88dp"
         android:layout_marginStart="8dp"
@@ -106,9 +109,10 @@
         android:layout_marginBottom="8dp"
         android:translationZ="90dp"
         app:adSize="SMART_BANNER"
-        app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        app:adUnitId="ca-app-pub-4833985159522271/3156142926"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
     </com.google.android.gms.ads.AdView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

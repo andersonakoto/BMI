@@ -23,12 +23,12 @@
                 android:resource="@xml/paths" />
         </provider>
 
+
         <activity android:name=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity"/>
         </activity>
-
         <activity android:name=".RatingActivity"
             android:windowSoftInputMode="adjustPan"
             android:theme = "@style/AppTheme">
@@ -48,10 +48,17 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ResultActivity" />
         </activity>
+
+        <activity android:name=".AboutActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".AboutActivity"/>
+        </activity>
+
             <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
             <meta-data
                 android:name="com.google.android.gms.ads.APPLICATION_ID"
-                android:value="ca-app-pub-3940256099942544~3347511713"/>
+                android:value="ca-app-pub-4833985159522271~5973877959"/>
     </application>
 
 </manifest>

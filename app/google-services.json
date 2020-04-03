@@ -8,20 +8,12 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:809718707523:android:bc276f32f8372f6f19ebf6",
+        "mobilesdk_app_id": "1:809718707523:android:4bc0ef3d5f156f5819ebf6",
         "android_client_info": {
-          "package_name": "com.pineappleapps.andersonakoto_bmi"
+          "package_name": "com.pineappleapps.bmi_and_corpulence_calculator"
         }
       },
       "oauth_client": [
-        {
-          "client_id": "809718707523-270ij7kh0v09qkgh6u4n5t1is06bjbka.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.pineappleapps.andersonakoto_bmi",
-            "certificate_hash": "e96fa904023f57a441464396673719f74a1f66c6"
-          }
-        },
         {
           "client_id": "809718707523-qujvalj8h4edf2fi8nbdaeb8umcesij6.apps.googleusercontent.com",
           "client_type": 3

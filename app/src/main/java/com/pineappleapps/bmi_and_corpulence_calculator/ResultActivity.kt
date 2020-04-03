@@ -18,6 +18,7 @@ import androidx.core.content.FileProvider
 import androidx.preference.PreferenceManager
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.InterstitialAd
 import com.google.android.gms.ads.MobileAds
 import com.tarek360.instacapture.Instacapture
 import com.tarek360.instacapture.listener.SimpleScreenCapturingListener
@@ -29,6 +30,7 @@ import java.util.*
 
 class ResultActivity : AppCompatActivity() {
 
+    private lateinit var mInterstitialAd: InterstitialAd
 
     lateinit var mAdView: AdView
 
@@ -39,8 +41,14 @@ class ResultActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.result_main)
-        setTitle("BMI Details")
+        setTitle("BMI and CI Results")
         getSupportActionBar()?.setDisplayHomeAsUpEnabled(true)
+
+        MobileAds.initialize(this) {}
+
+        mInterstitialAd = InterstitialAd(this)
+        mInterstitialAd.adUnitId = "ca-app-pub-4833985159522271/1046297985"
+        mInterstitialAd.loadAd(AdRequest.Builder().build())
 
 
         val bmi_value =
@@ -83,7 +91,7 @@ class ResultActivity : AppCompatActivity() {
 
 
         MobileAds.initialize(this) {}
-        mAdView = findViewById(R.id.adView)
+        mAdView = findViewById(R.id.adView_result)
         val adRequest = AdRequest.Builder().build()
         mAdView.loadAd(adRequest)
 
@@ -92,13 +100,14 @@ class ResultActivity : AppCompatActivity() {
             screenShotAndShareIt()
 
             Log.i("Success:", "Screenshot captured successfully.")
-
         }
 
-        bmi_rate.setOnClickListener {
+        bmi_about.setOnClickListener {
 
-            val intent = Intent(this, RatingActivity::class.java)
+            val intent = Intent(this, AboutActivity::class.java)
             startActivity(intent)
+            mInterstitialAd.show()
+
         }
 
 
@@ -115,11 +124,11 @@ class ResultActivity : AppCompatActivity() {
         textView.textSize = 20f
         textView.setTypeface(null, Typeface.BOLD)
         textView.layoutParams = LinearLayout.LayoutParams(
-            LinearLayout.LayoutParams.WRAP_CONTENT + 640,
+            LinearLayout.LayoutParams.WRAP_CONTENT,
             LinearLayout.LayoutParams.WRAP_CONTENT
         )
         textView.gravity = Gravity.CENTER_HORIZONTAL
-        textView.setTextColor(resources.getColor(R.color.bmi_icon_background))
+        textView.setTextColor(resources.getColor(R.color.bmi_white))
         supportActionBar!!.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
         supportActionBar!!.customView = textView
     }

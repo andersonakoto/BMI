@@ -4,6 +4,6 @@
     <color name="colorPrimaryDark">#009CB8</color>
     <color name="colorAccent">#0396DA</color>
     <color name="colorBMI">#0084C1</color>
-    <color name="icon_bmi">#ffffff</color>
+    <color name="bmi_white">#ffffff</color>
 
 </resources>

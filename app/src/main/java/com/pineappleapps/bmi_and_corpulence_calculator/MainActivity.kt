@@ -15,6 +15,7 @@ import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceManager
 import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.InterstitialAd
 import com.google.android.gms.ads.MobileAds
 import com.karumi.dexter.Dexter
@@ -32,12 +33,19 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var mInterstitialAd: InterstitialAd
 
+    lateinit var mAdView: AdView
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setTitle("BMI and Corpulence/Ponderal Index Calculator");
+        setTitle("BMI and CI Calculator");
         getSupportActionBar()?.setDisplayHomeAsUpEnabled(true)
+
+        MobileAds.initialize(this) {}
+        mAdView = findViewById(R.id.adView_main)
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
 
         requestReadPermissions()
 
@@ -49,7 +57,7 @@ class MainActivity : AppCompatActivity() {
         MobileAds.initialize(this) {}
 
         mInterstitialAd = InterstitialAd(this)
-        mInterstitialAd.adUnitId = "ca-app-pub-3940256099942544/1033173712"
+        mInterstitialAd.adUnitId = "ca-app-pub-4833985159522271/1046297985"
         mInterstitialAd.loadAd(AdRequest.Builder().build())
 
 
@@ -110,11 +118,11 @@ class MainActivity : AppCompatActivity() {
         textView.textSize = 20f
         textView.setTypeface(null, Typeface.BOLD)
         textView.layoutParams = LinearLayout.LayoutParams(
-            LinearLayout.LayoutParams.WRAP_CONTENT + 640,
+            LinearLayout.LayoutParams.WRAP_CONTENT,
             LinearLayout.LayoutParams.WRAP_CONTENT
         )
         textView.gravity = Gravity.CENTER_HORIZONTAL
-        textView.setTextColor(resources.getColor(com.pineappleapps.bmi_and_corpulence_calculator.R.color.bmi_icon_background))
+        textView.setTextColor(resources.getColor(R.color.bmi_white))
         supportActionBar!!.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
         supportActionBar!!.customView = textView
     }
@@ -142,6 +150,29 @@ class MainActivity : AppCompatActivity() {
             .onSameThread()
             .check()
     }
+
+    private var sayBackPress: Long = 0
+
+
+    override fun onBackPressed() {
+        if (sayBackPress + 2000 > System.currentTimeMillis()) {
+            val a = Intent(Intent.ACTION_MAIN)
+            a.addCategory(Intent.CATEGORY_HOME)
+            startActivity(a)
+            finishAffinity()
+            finish()
+            finishAndRemoveTask()
+            System.exit(0)
+            onDestroy()
+            super.onBackPressed()
+        } else {
+            Toast.makeText(this, "Press back again to exit.", Toast.LENGTH_SHORT)
+                .show()
+            sayBackPress = System.currentTimeMillis()
+            mInterstitialAd.show()
+        }
+    }
+
 
 }
 
