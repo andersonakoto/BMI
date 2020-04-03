@@ -29,11 +29,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity"/>
         </activity>
-        <activity android:name=".RatingActivity"
-            android:windowSoftInputMode="adjustPan"
-            android:theme = "@style/AppTheme">
-
-        </activity>
 
         <activity android:name=".SplashscreenActivity"
             android:theme="@style/SplashTheme">
