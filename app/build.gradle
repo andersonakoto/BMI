@@ -10,8 +10,8 @@ android {
         applicationId "com.pineappleapps.bmi_and_corpulence_calculator"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 1
-        versionName "20.0"
+        versionCode 2
+        versionName "20.4.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -33,7 +33,7 @@ apply plugin: 'com.google.firebase.crashlytics'
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.google.firebase:firebase-analytics:17.3.0'
-    implementation 'com.google.firebase:firebase-crashlytics:17.0.0-beta03'
+    implementation 'com.google.firebase:firebase-crashlytics:17.0.0-beta04'
 
     implementation 'com.karumi:dexter:5.0.0'
 
