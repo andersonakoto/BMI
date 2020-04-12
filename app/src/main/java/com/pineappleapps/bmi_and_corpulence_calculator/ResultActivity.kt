@@ -180,7 +180,7 @@ class ResultActivity : AppCompatActivity() {
                             intent.putExtra(Intent.EXTRA_STREAM, urii)
                             intent.setDataAndType(urii, getContentResolver().getType(urii));
                             intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "");
-                            intent.putExtra(android.content.Intent.EXTRA_TEXT, "Hey! Kindly Check out my BMI and Corpulence/Ponderal Index.");
+                            intent.putExtra(android.content.Intent.EXTRA_TEXT, "Hey! Kindly Check out my BMI and Corpulence/Ponderal Index. You can check yours too by downloading this FREE app-> https://play.google.com/store/apps/details?id=com.pineappleapps.bmi_and_corpulence_calculator");
                             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
                             startActivity(Intent.createChooser(intent, "Share your BMI details..."));
 
